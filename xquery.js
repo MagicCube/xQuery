@@ -1,9 +1,16 @@
 const xQueryPrototype = {
     text: function(value)
     {
-        this.forEach(node => {
-            node.innerText = value;
-        });
+        if (argumetns.length === 0)
+        {
+            return this.length > 0 ? this[0].innerText : undefined;
+        }
+        else
+        {
+            this.forEach(node => {
+                node.innerText = value;
+            });
+        }
     },
     forEach: Array.prototype.forEach,
     length: Array.prototype.length,
